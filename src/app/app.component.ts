@@ -6,7 +6,10 @@ import { MailService } from './mail.service';
   template: `<div>
     <app-simple-form>
     </app-simple-form>
-    {{mail.message}}
+    <ul>
+      <li *ngFor="let message of mail.messages">
+      {{message}}</li>
+    </ul>
   </div>`,
   styleUrls: ['./app.component.css']
 })
